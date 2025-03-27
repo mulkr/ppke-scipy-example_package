@@ -1,10 +1,16 @@
 from setuptools import setup
 
+# Parse README.md as long_description
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
+# Parse requirements.txt as install_requires
+with open("requirements.txt", "r", encoding="utf-8") as f:
+    require = f.read().splitlines()
+
+# !TODO: Change these settings
 setup(
-    name="example_package",
+    name="example_package", # Name of the package
     version="0.0",
     description="An example package",
     author="Kristóf Müller, You",
@@ -19,8 +25,7 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
     ],
-    packages=["example_package"],
-    install_requires=[  "numpy>=1.25.2",
-                        "matplotlib>=3.6.2"],
+    packages=["example_package"], # Name of the package directory
+    install_requires=[require],
     python_requires=">=3.10"
 )
