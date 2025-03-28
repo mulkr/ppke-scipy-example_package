@@ -1,8 +1,9 @@
 import numpy as np
 import numpy.typing as npt
 import matplotlib.pyplot as plt
+from matplotlib.axes import Axes
 
-def create_data(length: int) -> npt.NDArray[np.float_]:
+def create_data(length: int) -> npt.NDArray[np.float64]:
     """Creates some toy data with a given length
 
     Args:
@@ -12,10 +13,10 @@ def create_data(length: int) -> npt.NDArray[np.float_]:
         numpy.ndarray[float]: toy data
     """
     data = np.arange(length)
-    data = np.exp(data,dtype=np.float_)
+    data = np.exp(data,dtype=np.float64)
     return data
 
-def plot_data(data: npt.NDArray[np.float_],fig: plt.Axes|None = None)->None:
+def plot_data(data: npt.NDArray[np.float64],fig: Axes|None = None)->None:
     """Plot the given data on a decorated figure. If the figure does not exist, it creates one.
 
     Args:
