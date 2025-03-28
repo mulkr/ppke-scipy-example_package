@@ -34,7 +34,7 @@ This will create a `dist` directory with a source tarball and wheel file. These 
 ### Creating and building the documentation:
 Install Sphinx:
 ```console
-pip install sphinx-build
+pip install sphinx
 ```
 Run "quickstart" and follow the prompts:
 ```console
